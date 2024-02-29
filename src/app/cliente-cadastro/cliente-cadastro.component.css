@@ -1,0 +1,11 @@
+.borda-estilosa {
+    border: 1px solid #76359a;
+    border-radius: 15px;
+    padding: 10px;
+    border-top-width: medium;
+}
+
+.espaco-borda {
+    margin-bottom: 5px;
+    margin-right: 2px;
+}

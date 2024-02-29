@@ -1,0 +1,40 @@
+<po-page-default p-title="Lista de clientes cadastrados">
+    <div class="" >
+        <div class="po-row po-md-12 borda-estilosa espaco-borda" *ngFor="let clienteTela of clientes">
+            <div class="po-md-6">
+                <table>
+                    <tbody>
+                        <tr>
+                            <td><b>Nome:</b></td>
+                            <td>{{ clienteTela.nome }}</td>
+                        </tr>
+                        <tr>
+                            <td><b>Endeço:</b></td>
+                            <td>{{ clienteTela.endereco }}</td>
+                        </tr>
+                        <tr>
+                            <td><b>Bairro:</b></td>
+                            <td>{{ clienteTela.bairro }}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="po-md-6">
+                <table class="po-md-12">
+                    <thead>
+                        <tr>
+                            <th>Telefones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let tel of clienteTela.telefones">
+                            <td>{{ tel }}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    
+
+</po-page-default>

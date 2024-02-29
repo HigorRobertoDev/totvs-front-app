@@ -1,0 +1,58 @@
+<po-page-default p-title="Formulário de cadastro">
+
+  <form #clienteForm="ngForm" (ngSubmit)="onSubmit()">
+
+
+    <div class="po-row">
+      <div class="po-md-6">
+        <po-input name="nome" p-label="Nome" [(ngModel)]="cliente.nome"> </po-input>
+      </div>
+      <div class="po-md-6">
+        <po-input name="endereco" p-label="Endereço" [(ngModel)]="cliente.endereco"> </po-input>
+      </div>
+    </div>
+
+    <div class="po-row">
+      <div class="po-md-6">
+        <po-input name="bairro" p-label="Bairro" [(ngModel)]="cliente.bairro"> </po-input>
+      </div>
+    </div>
+
+    <div class="po-row">
+      <div class="po-md-6">
+        <po-input name="telefone" p-label="Telefone" [(ngModel)]="cliente.telefone"> </po-input>
+      </div>
+      <div class="po-md-6">
+        <po-button style="padding-top: 31px !important;" p-label="Adicionar telefone" (p-click)="addTelefone()">
+        </po-button>
+      </div>
+    </div>
+
+    <div class="po-row">
+      <div class="po-md-12">
+        <po-list-view p-property-title="name" [p-items]="itensTela">
+          <ng-template p-list-view-content-template let-item>
+            <div class="po-row">
+              <po-info class="po-md-12" p-mask-format-model="true" p-mask="(99) 99999?-9999" p-label="Telefone:" [p-value]="item.telefone"></po-info>
+            </div>
+          </ng-template>
+        </po-list-view>
+      </div>
+    </div>
+
+    <div class="po-row">
+      <div class="po-md-6">
+        <po-button p-label="Salvar cliente" (p-click)="onSubmit()"> </po-button>
+      </div>
+    </div>
+    <br />
+    <div class="po-row">
+      <div class="po-md-12">
+        <po-info p-label="Mensagem" p-value="Cliente salvo com sucesso" *ngIf="success == true"> </po-info>
+        <po-info p-label="Mensagem" p-value="Erro ao salvar cliente" *ngIf="errorService == true"> </po-info>
+      </div>
+    </div>
+
+  </form>
+
+</po-page-default>

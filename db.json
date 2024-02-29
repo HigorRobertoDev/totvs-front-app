@@ -1,0 +1,35 @@
+{
+  "clientes": [
+    {
+      "id": "1",
+      "nome": "Higão de Guararema",
+      "endereco": "Rua do Oleo",
+      "bairro": "Ponte Alta",
+      "telefones": [
+        "(11) 99999-0000",
+        "(11) 99999-0001"
+      ]
+    },
+    {
+      "id": "2",
+      "nome": "José de Santo Andre",
+      "endereco": "Rua Vaticana",
+      "bairro": "Ponte baixa",
+      "telefones": [
+        "(11) 99999-0003",
+        "(11) 99999-0004"
+      ]
+    },
+    {
+      "id": "3",
+      "nome": "Diego do Rio",
+      "endereco": "Rua dos três tiros",
+      "bairro": "Morro do Zé",
+      "telefones": [
+        "(11) 99999-0005",
+        "(11) 99999-0006",
+        "(11) 99999-0007"
+      ]
+    }
+  ]
+}
